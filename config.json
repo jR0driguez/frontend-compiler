@@ -1,0 +1,23 @@
+{
+  "path": "../Aplicacion",
+  "env": "dev",
+  "dev": {
+    "imports": {
+      "path": "/htdocs/modules/libs/",
+      "files": {
+        "react": "react.development.js",
+        "reactDOM": "/htdocs/modules/libs/react-dom.development.js"
+      }
+    }
+  },
+  "prod": {
+    "compress": true,
+    "imports": {
+      "path": "/htdocs/modules/libs/",
+      "files": {
+        "react": "react.development.js",
+        "reactDOM": "react-dom.development.js"
+      }
+    }
+  }
+}
