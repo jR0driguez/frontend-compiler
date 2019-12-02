@@ -36,7 +36,7 @@ class Modules {
 
             intoFolder.forEach(index => {
 
-                const directory = `${dir}${Path.sep}${index}`;
+                const directory = Path.join('./', dir, index);
                 const isDirectory = fs.statSync(directory).isDirectory();
 
                 if (isDirectory) {
@@ -45,7 +45,7 @@ class Modules {
 
             });
 
-            this._directories.set(dir, dir);
+            this._directories.set(Path.join(dir), dir);
             this._entries.set(`${dir}`, module);
 
         });
@@ -56,7 +56,6 @@ class Modules {
     async load() {
         try {
             await this._entries.forEach(async (module, path) => {
-                console.log(1, module);
                 let resp = await module.load();
                 console.log(`compiled module: ${path}`, resp);
             });

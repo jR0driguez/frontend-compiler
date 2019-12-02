@@ -22,7 +22,6 @@ class Builder {
         }
 
         const bundleManager = new (require('./bundles/code'))(jumps);
-
         await bundleManager.process(module, location, output);
 
     }

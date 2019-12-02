@@ -5,9 +5,7 @@ function Reader() {
     Object.defineProperty(this, 'files', {'get': () => files});
 
     this.read = (dir) => {
-
         let entries = fs.readdirSync(dir);
-
         entries.forEach((file) => {
             const isDirectory = fs.statSync(`${dir}/${file}`).isDirectory();
             if (isDirectory) this.read(file);

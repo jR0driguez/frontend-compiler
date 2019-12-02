@@ -1,0 +1,22 @@
+{
+  "name": "jida-frontend-compiler",
+  "version": "0.0.3",
+  "main": "manager.js",
+  "repository": "https://github.com/jR0driguez/frontend-compiler",
+  "homepage": "https://github.com/jR0driguez/frontend-compiler#readme.md",
+  "author": {
+    "email": "jrodriguez@jidadesarrollos.com",
+    "name": "Julio Rodriguez",
+    "url": "https://twitter.com/ark0soner"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "babel-loader": "^8.0.6",
+    "chokidar": "^3.2.2",
+    "generate-source-map": "0.0.5",
+    "minify": "^4.1.3"
+  }
+}

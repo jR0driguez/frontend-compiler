@@ -20,4 +20,4 @@ function Helpers() {
     }
 }
 
-module.exports = new Helpers();
+    module.exports = new Helpers();
