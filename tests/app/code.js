@@ -1,5 +1,5 @@
-import React from '../react.development.js';
-import ReactDOM from '../react-dom.development.js';
+import {React} from '../react/react.development.js';
+import {ReactDOM} from '../react/react-dom.development.js';
 
 /**
 * file: app.js

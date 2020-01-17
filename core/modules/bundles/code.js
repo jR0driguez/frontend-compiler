@@ -17,7 +17,8 @@ class Code {
 
             for (let library in config.imports.files) {
                 if (config.imports.files.hasOwnProperty(library)) {
-                    code += `import ${library} from '${this._jumps}${config.imports.files[library]}';\n`;
+                    let file = config.imports.files[library];
+                    code += `import {${library}} from '${this._jumps}${config.imports.path}/${file}';\n`;
                 }
 
             }
