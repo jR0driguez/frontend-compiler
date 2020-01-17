@@ -11,7 +11,6 @@ function Directory(path) {
 
     this.read = (dir) => {
 
-        console.log(1, dir);
         let entries = fs.readdirSync(dir);
 
         entries.forEach((file) => {
@@ -22,7 +21,6 @@ function Directory(path) {
             else {
                 files.push(new File(dir, file));
             }
-
 
         });
 

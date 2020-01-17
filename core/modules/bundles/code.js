@@ -11,13 +11,15 @@ class Code {
 
     async process(module, dirname, output) {
 
-        console.log(0, global.CONFIG);
         const config = global.CONFIG;
         let code = '';
         if (config.imports && typeof config.imports === 'object') {
 
             for (let library in config.imports.files) {
-                code += `import ${library} from '${this._jumps}${config.imports.files[library]}';\n`;
+                if (config.imports.files.hasOwnProperty(library)) {
+                    code += `import ${library} from '${this._jumps}${config.imports.files[library]}';\n`;
+                }
+
             }
         }
 
