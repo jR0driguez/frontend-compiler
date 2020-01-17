@@ -1,6 +1,6 @@
 {
   "name": "jida-frontend-compiler",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "main": "manager.js",
   "repository": "https://github.com/jR0driguez/frontend-compiler",
   "homepage": "https://github.com/jR0driguez/frontend-compiler#readme.md",
