@@ -1,6 +1,7 @@
 function File(path, name) {
     'use strict';
 
+    console.log(2, path, name)
     const Path = require('path');
     const fs = require('fs');
 

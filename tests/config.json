@@ -3,17 +3,17 @@
   "env": "dev",
   "dev": {
     "imports": {
-      "path": "htdocs/modules/libs/",
+      "path": "react",
       "files": {
-        "react": "react.development.js",
-        "reactDOM": "react-dom.development.js"
+        "React": "react.development.js",
+        "ReactDOM": "react-dom.development.js"
       }
     }
   },
   "prod": {
     "compress": true,
     "imports": {
-      "path": "htdocs/modules/libs/",
+      "path": "react",
       "files": {
         "react": "react.development.js",
         "reactDOM": "react-dom.development.js"

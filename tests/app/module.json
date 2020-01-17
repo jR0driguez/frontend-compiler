@@ -2,8 +2,6 @@
   "bundle": "code",
   "js": {
     "path": "js",
-    "files": [
-      "app.js"
-    ]
+    "files": "*"
   }
 }

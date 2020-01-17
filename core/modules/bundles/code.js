@@ -11,9 +11,15 @@ class Code {
 
     async process(module, dirname, output) {
 
+        console.log(0, global.CONFIG);
+        const config = global.CONFIG;
         let code = '';
-        code += `import {React} from '${this._jumps}htdocs/modules/libs/react.development.js';\n`;
-        code += `import {ReactDOM} from '${this._jumps}htdocs/modules/libs/react-dom.development.js';\n`;
+        if (config.imports && typeof config.imports === 'object') {
+
+            for (let library in config.imports.files) {
+                code += `import ${library} from '${this._jumps}${config.imports.files[library]}';\n`;
+            }
+        }
 
         const fs = helpers.fs;
 
