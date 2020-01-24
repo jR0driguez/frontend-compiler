@@ -1,4 +1,4 @@
-function Directory(path) {
+function Directory(path, filesIncluded) {
     'use strict';
     const Path = require('path');
     const fs = require('fs');
@@ -11,7 +11,7 @@ function Directory(path) {
 
     this.read = (dir) => {
 
-        let entries = fs.readdirSync(dir);
+        let entries = filesIncluded ? filesIncluded : fs.readdirSync(dir);
 
         entries.forEach((file) => {
 

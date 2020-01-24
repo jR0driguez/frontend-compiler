@@ -3,5 +3,13 @@
   "js": {
     "path": "js",
     "files": "*"
+  },
+  "imports": "imports.js",
+  "scss": {
+    "path": "scss",
+    "files": [
+      "vars.scss",
+      "main.scss"
+    ]
   }
 }

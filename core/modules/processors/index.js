@@ -1,17 +1,14 @@
-class Processors {
+function Processors() {
 
-    constructor() {
-        this._js = new (require('./js'))();
-        this._jsx = new (require('./jsx'))();
-    }
+    const js = new (require('./js'))();
+    Object.defineProperty(this, 'js', {'get': () => js});
 
-    get js() {
-        return this._js;
-    }
+    const jsx = new (require('./jsx'))();
+    Object.defineProperty(this, 'jsx', {'get': () => jsx});
 
-    get jsx() {
-        return this._jsx;
-    }
+    const scss = new (require('./scss'))();
+    Object.defineProperty(this, 'scss', {'get': () => scss});
+
 }
 
 module.exports = Processors;
